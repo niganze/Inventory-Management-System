@@ -90,5 +90,5 @@ This project is licensed under the MIT License.
 ---
 
 ## 📧 Contact
-For support, contact **Alain Niganze** at [email@example.com](mailto:email@example.com).
+For support, contact **Alain Niganze** at [niganzealain@gmail.com](mailto:niganzealain@gmail.com).
 
