@@ -6,6 +6,9 @@ import inventoryRoutes from './routes/inventoryRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import borrowingRoutes from './routes/borrowingRoutes.js';
 import personRoutes from './routes/personRoutes.js';
+import damageReportRoutes from './routes/damageReportRoutes.js';
+import systemLogRoutes from './routes/systemLogRoutes.js';
+
 
 dotenv.config();
 
@@ -21,6 +24,8 @@ app.use('/api/users', userRoutes);
 app.use('/api/inventory', inventoryRoutes);
 app.use('/api/borrowings', borrowingRoutes);
 app.use('/api/people', personRoutes);
+app.use('/api/damage-reports', damageReportRoutes);
+app.use('/api/system-logs', systemLogRoutes);
 
 const PORT = process.env.PORT || 5000;
 
