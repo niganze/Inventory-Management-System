@@ -8,7 +8,8 @@ import borrowingRoutes from './routes/borrowingRoutes.js';
 import personRoutes from './routes/personRoutes.js';
 import damageReportRoutes from './routes/damageReportRoutes.js';
 import systemLogRoutes from './routes/systemLogRoutes.js';
-
+import swaggerUi from 'swagger-ui-express';
+import yaml from 'yamljs';
 
 dotenv.config();
 
@@ -18,6 +19,11 @@ connectDB();
 
 app.use(cors());
 app.use(express.json());
+
+
+// Load Swagger YAML file
+const swaggerDocument = yaml.load('./src/docs/swagger.yaml');
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // User routes middleware
 app.use('/api/users', userRoutes);
